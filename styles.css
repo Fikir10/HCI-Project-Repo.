@@ -1,0 +1,157 @@
+/* ==========================================================
+   SHARED SHELL STYLES
+   Everyone, put your tab-specific CSS in its own clearly
+   commented block below, using your tab's prefix
+   (text-, lr-, colors-, profile-, choices-, todo-)
+   so nothing collides with anyone else's rules.
+   ========================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #e8e8e8;
+  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Device frame: fixed 640x960, do not change */
+#device-frame {
+  position: relative;
+  width: 640px;
+  height: 960px;
+  background: #ffffff;
+  overflow: hidden;
+  border: 1px solid #999;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Content area sits above the nav bar */
+#tab-content-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 90px; /* leaves room for the bottom nav */
+  overflow-y: auto;
+}
+
+.tab-panel {
+  display: none; /* app.js toggles this */
+  height: 100%;
+  padding: 0 0 20px 0;
+}
+
+/* Shared per-tab title header */
+.tab-title {
+  margin: 0 0 12px 0;
+  padding: 16px 20px;
+  font-size: 22px;
+}
+
+.tab-panel > *:not(.tab-title) {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+/* Bottom nav bar */
+#bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  display: flex;
+  background: #fafafa;
+  border-top: 1px solid #ccc;
+}
+
+.nav-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: #666;
+  cursor: pointer;
+  padding: 8px 4px;
+}
+
+.nav-btn img {
+  width: 26px;
+  height: 26px;
+}
+
+.nav-btn.active {
+  background: rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* ==========================================================
+   TAB 2 — LR  (owner: Alex)
+   ========================================================== */
+#panel-lr {
+  position: relative;
+}
+
+.lr-corner-text {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  margin: 0;
+}
+
+/* ==========================================================
+   TAB 3 — Colors  (owner: Alex)
+   ========================================================== */
+.colors-line-1 {
+  color: yellow;
+  background: black;
+  padding: 10px;
+  margin: 0 0 8px 0;
+}
+
+.colors-line-2 {
+  color: purple;
+  background: yellow;
+  padding: 10px;
+  margin: 0 0 16px 0;
+}
+
+#colors-pie-chart {
+  width: 300px;
+  height: 300px;
+}
+
+/* ==========================================================
+   TAB 1 — Text  (owner: TBD — add your styles below, prefixed "text-")
+   ========================================================== */
+
+
+/* ==========================================================
+   TAB 4 — Profile  (owner: TBD — add your styles below, prefixed "profile-")
+   ========================================================== */
+
+
+/* ==========================================================
+   TAB 5 — Choices  (owner: TBD — add your styles below, prefixed "choices-")
+   ========================================================== */
+
+
+/* ==========================================================
+   TAB 6 — ToDo  (owner: TBD — add your styles below, prefixed "todo-")
+   ========================================================== */

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kitchen Kompanion — Phase 1.2 Prototype</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       DEVICE FRAME — 640x960, represents the 8.3" target device.
+       Do not resize this. Everyone's tab content lives INSIDE
+       #tab-content-area, one <section> per tab.
+       ============================================================ -->
+  <div id="device-frame">
+
+    <!-- Content area: each tab is its own <section>.
+         Only one is visible at a time (controlled by app.js). -->
+    <div id="tab-content-area">
+
+      <!-- TAB 1: Text -->
+      <section class="tab-panel" id="panel-text" data-tab="text">
+        <!-- OWNER: [assign teammate] -->
+        <p>Tab 1 "Text" content goes here — long scrollable text.</p>
+      </section>
+
+      <!-- TAB 2: LR -->
+      <section class="tab-panel" id="panel-lr" data-tab="lr">
+        <!-- OWNER: you (Alex) -->
+        <p class="lr-corner-text">Down Here</p>
+      </section>
+
+      <!-- TAB 3: Colors -->
+      <section class="tab-panel" id="panel-colors" data-tab="colors">
+        <!-- OWNER: you (Alex) -->
+        <p class="colors-line-1">Sample line one</p>
+        <p class="colors-line-2">Sample line two</p>
+        <div id="colors-pie-chart"><!-- pie chart goes here --></div>
+      </section>
+
+      <!-- TAB 4: Profile -->
+      <section class="tab-panel" id="panel-profile" data-tab="profile">
+        <!-- OWNER: [assign teammate] -->
+        <p>Tab 4 "Profile" content goes here — image + name + tap notification.</p>
+      </section>
+
+      <!-- TAB 5: Choices -->
+      <section class="tab-panel" id="panel-choices" data-tab="choices">
+        <!-- OWNER: [assign teammate] -->
+        <p>Tab 5 "Choices" content goes here — radio, dropdown, button + result text.</p>
+      </section>
+
+      <!-- TAB 6: ToDo -->
+      <section class="tab-panel" id="panel-todo" data-tab="todo">
+        <!-- OWNER: [assign teammate] -->
+        <p>Tab 6 "ToDo" content goes here — add / delete / cross off items.</p>
+      </section>
+
+    </div>
+
+    <!-- BOTTOM NAV BAR — fixed to bottom of device frame -->
+    <nav id="bottom-nav">
+      <button class="nav-btn active" data-tab="text">
+        <img src="icons/text.png" alt="">
+        <span>Text</span>
+      </button>
+      <button class="nav-btn" data-tab="lr">
+        <img src="icons/lr.png" alt="">
+        <span>LR</span>
+      </button>
+      <button class="nav-btn" data-tab="colors">
+        <img src="icons/colors.png" alt="">
+        <span>Colors</span>
+      </button>
+      <button class="nav-btn" data-tab="profile">
+        <img src="icons/profile.png" alt="">
+        <span>Profile</span>
+      </button>
+      <button class="nav-btn" data-tab="choices">
+        <img src="icons/choices.png" alt="">
+        <span>Choices</span>
+      </button>
+      <button class="nav-btn" data-tab="todo">
+        <img src="icons/todo.png" alt="">
+        <span>ToDo</span>
+      </button>
+    </nav>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
