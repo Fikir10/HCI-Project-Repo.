@@ -1,7 +1,6 @@
 /* ==========================================================
-   SHARED SHELL LOGIC — tab switching.
-   Don't edit this section. Add your own tab's JS in the
-   clearly marked block for your tab further down.
+   Shared tab-switching logic — don't edit. Add your tab's JS in your
+   labeled block below.
    ========================================================== */
 
 document.querySelectorAll(".nav-btn").forEach(function (btn) {
@@ -25,40 +24,31 @@ document.getElementById("panel-text").classList.add("active");
 
 
 /* ==========================================================
-   TAB 1 — Text (owner: TBD)
-   Add any JS your tab needs below, wrapped so it doesn't
-   run into anyone else's variable/function names.
+   TAB 1 — Text (Kyra)
    ========================================================== */
 
 
 /* ==========================================================
-   TAB 2 — LR (owner: Alex)
-   No JS needed — pure CSS positioning.
+   TAB 2 — LR (Fikir)
    ========================================================== */
 
 
 /* ==========================================================
-   TAB 3 — Colors (owner: Alex)
-   If generating the pie chart dynamically (e.g. via <canvas>
-   or SVG), put that logic here.
+   TAB 3 — Colors (Fikir)
    ========================================================== */
 
 
 /* ==========================================================
-   TAB 4 — Profile (owner: TBD)
+   TAB 4 — Profile (Raiya)
    Image tap -> show notification -> user can close it.
    ========================================================== */
 
 
 /* ==========================================================
-   TAB 5 — Choices (owner: TBD)
-   Radio + dropdown + button that displays a result reflecting
-   the selected options.
+   TAB 5 — Choices (Kyra)
    ========================================================== */
 
 
 /* ==========================================================
-   TAB 6 — ToDo (owner: TBD)
-   Add item, delete item, cross off item. Consider storing the
-   list in a simple JS array (no server, no real database).
+   TAB 6 — ToDo (Sydney)
    ========================================================== */
