@@ -7,58 +7,47 @@
 </head>
 <body>
 
-  <!-- ============================================================
-       DEVICE FRAME — 640x960, represents the 8.3" target device.
-       Do not resize this. Everyone's tab content lives INSIDE
-       #tab-content-area, one <section> per tab.
-       ============================================================ -->
+  <!-- DEVICE FRAME — 640x960, don't resize. Each tab = one <section>. -->
   <div id="device-frame">
 
-    <!-- Content area: each tab is its own <section>.
-         Only one is visible at a time (controlled by app.js). -->
+    <!-- Only one tab-panel is visible at a time (app.js handles this) -->
     <div id="tab-content-area">
 
-      <!-- TAB 1: Text -->
+      <!-- TAB 1 (Kyra) -->
       <section class="tab-panel" id="panel-text" data-tab="text">
-        <!-- OWNER: [assign teammate] -->
         <p>Tab 1 "Text" content goes here — long scrollable text.</p>
       </section>
 
-      <!-- TAB 2: LR -->
+      <!-- TAB 2 (Fikir) -->
       <section class="tab-panel" id="panel-lr" data-tab="lr">
-        <!-- OWNER: you (Alex) -->
         <p class="lr-corner-text">Down Here</p>
       </section>
 
-      <!-- TAB 3: Colors -->
+      <!-- TAB 3 (Fikir) -->
       <section class="tab-panel" id="panel-colors" data-tab="colors">
-        <!-- OWNER: you (Alex) -->
         <p class="colors-line-1">Sample line one</p>
         <p class="colors-line-2">Sample line two</p>
         <div id="colors-pie-chart"><!-- pie chart goes here --></div>
       </section>
 
-      <!-- TAB 4: Profile -->
+      <!-- TAB 4 (Raiya) -->
       <section class="tab-panel" id="panel-profile" data-tab="profile">
-        <!-- OWNER: [assign teammate] -->
         <p>Tab 4 "Profile" content goes here — image + name + tap notification.</p>
       </section>
 
-      <!-- TAB 5: Choices -->
+      <!-- TAB 5 (Kyra) -->
       <section class="tab-panel" id="panel-choices" data-tab="choices">
-        <!-- OWNER: [assign teammate] -->
         <p>Tab 5 "Choices" content goes here — radio, dropdown, button + result text.</p>
       </section>
 
-      <!-- TAB 6: ToDo -->
+      <!-- TAB 6 (Sydney) -->
       <section class="tab-panel" id="panel-todo" data-tab="todo">
-        <!-- OWNER: [assign teammate] -->
         <p>Tab 6 "ToDo" content goes here — add / delete / cross off items.</p>
       </section>
 
     </div>
 
-    <!-- BOTTOM NAV BAR — fixed to bottom of device frame -->
+    <!-- BOTTOM NAV BAR -->
     <nav id="bottom-nav">
       <button class="nav-btn active" data-tab="text">
         <img src="icons/text.png" alt="">
