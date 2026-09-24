@@ -1,9 +1,7 @@
 /* ==========================================================
    SHARED SHELL STYLES
-   Everyone, put your tab-specific CSS in its own clearly
-   commented block below, using your tab's prefix
-   (text-, lr-, colors-, profile-, choices-, todo-)
-   so nothing collides with anyone else's rules.
+   Add your tab's CSS in your labeled block below,
+   prefixed with your tab name (text-, profile-, choices-, todo-).
    ========================================================== */
 
 * {
@@ -47,7 +45,8 @@ body {
   padding: 0 0 20px 0;
 }
 
-/* Shared per-tab title header */
+/* Optional title header — add <h1 class="tab-title">...</h1> as the
+   first element in your <section> to use it */
 .tab-title {
   margin: 0 0 12px 0;
   padding: 16px 20px;
@@ -102,7 +101,7 @@ body {
 }
 
 /* ==========================================================
-   TAB 2 — LR  (owner: Alex)
+   TAB 2 — LR  (Fikir)
    ========================================================== */
 #panel-lr {
   position: relative;
@@ -116,7 +115,7 @@ body {
 }
 
 /* ==========================================================
-   TAB 3 — Colors  (owner: Alex)
+   TAB 3 — Colors  (Fikir)
    ========================================================== */
 .colors-line-1 {
   color: yellow;
@@ -138,20 +137,20 @@ body {
 }
 
 /* ==========================================================
-   TAB 1 — Text  (owner: TBD — add your styles below, prefixed "text-")
+   TAB 1 — Text  (Kyra)
    ========================================================== */
 
 
 /* ==========================================================
-   TAB 4 — Profile  (owner: TBD — add your styles below, prefixed "profile-")
+   TAB 4 — Profile  (Raiya)
    ========================================================== */
 
 
 /* ==========================================================
-   TAB 5 — Choices  (owner: TBD — add your styles below, prefixed "choices-")
+   TAB 5 — Choices  (Kyra)
    ========================================================== */
 
 
 /* ==========================================================
-   TAB 6 — ToDo  (owner: TBD — add your styles below, prefixed "todo-")
+   TAB 6 — ToDo  (Sydney)
    ========================================================== */
