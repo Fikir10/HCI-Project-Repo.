@@ -11,7 +11,7 @@
 body {
   margin: 0;
   background: #e8e8e8;
-  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,8 +70,8 @@ body {
   right: 0;
   height: 90px;
   display: flex;
-  background: #fafafa;
-  border-top: 1px solid #ccc;
+  background: #00008b;
+  border-top: 1px solid #00006b;
 }
 
 .nav-btn {
@@ -84,19 +84,19 @@ body {
   background: none;
   border: none;
   font-size: 12px;
-  color: #666;
+  color: #ffff00;
   cursor: pointer;
   padding: 8px 4px;
 }
 
 .nav-btn img {
-  width: 26px;
-  height: 26px;
+  width: 40px;
+  height: 40px;
 }
 
 .nav-btn.active {
-  background: rgba(0, 0, 0, 0.25);
-  color: #ffffff;
+  background: #575757;
+  color: #ffff00;
   font-weight: bold;
 }
 
@@ -105,35 +105,52 @@ body {
    ========================================================== */
 #panel-lr {
   position: relative;
+  background: pink;
+}
+
+.lr-title {
+  font-size: 32px;
+  text-align: left;
 }
 
 .lr-corner-text {
   position: absolute;
   bottom: 20px;
-  right: 20px;
+  right: 5px;
   margin: 0;
 }
 
 /* ==========================================================
    TAB 3 — Colors  (Fikir)
    ========================================================== */
+#panel-colors {
+  background: pink;
+}
+
 .colors-line-1 {
   color: yellow;
   background: black;
-  padding: 10px;
-  margin: 0 0 8px 0;
+  padding: 5px;
+  margin: 0; 
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 .colors-line-2 {
   color: purple;
   background: yellow;
-  padding: 10px;
+  padding: 5px;
   margin: 0 0 16px 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 #colors-pie-chart {
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
+  margin: 20px auto 0 auto;
 }
 
 /* ==========================================================

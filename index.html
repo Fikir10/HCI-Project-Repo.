@@ -20,14 +20,18 @@
 
       <!-- TAB 2 (Fikir) -->
       <section class="tab-panel" id="panel-lr" data-tab="lr">
+        <h1 class="tab-title lr-title">-Text in Lower Right-</h1>
         <p class="lr-corner-text">Down Here</p>
       </section>
 
       <!-- TAB 3 (Fikir) -->
       <section class="tab-panel" id="panel-colors" data-tab="colors">
-        <p class="colors-line-1">Sample line one</p>
-        <p class="colors-line-2">Sample line two</p>
-        <div id="colors-pie-chart"><!-- pie chart goes here --></div>
+        <h1 class="tab-title lr-title">-Colors-</h1>
+        <p class="colors-line-1">Hello There</p>
+        <p class="colors-line-2">Hi Again</p>
+        <div id="colors-pie-chart">
+            <canvas id="colors-pie-canvas"></canvas>
+        </div>
       </section>
 
       <!-- TAB 4 (Raiya) -->
@@ -77,6 +81,9 @@
 
   </div>
 
+  <!-- Chart.js + datalabels plugin (Tab 3's pie chart)-->
+  <script src="chart.js"></script>
+  <script src="chartjs-plugin-datalabels.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
