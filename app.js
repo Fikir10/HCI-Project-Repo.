@@ -66,7 +66,17 @@ document.getElementById("panel-text").classList.add("active");
    TAB 4 — Profile (Raiya)
    Image tap -> show notification -> user can close it.
    ========================================================== */
+var profileImage = document.getElementById("profile-image");
+var profileNotification = document.getElementById("profile-notification");
+var closeNotification = document.getElementById("profile-close");
 
+profileImage.addEventListener("click", function () {
+   profileNotification.style.display = "block";
+});
+
+closeNotification.addEventListener("click", function () {
+   profileNotification.style.display = "none";
+});
 
 /* ==========================================================
    TAB 5 — Choices (Kyra)

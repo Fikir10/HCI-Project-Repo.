@@ -162,6 +162,47 @@ body {
    TAB 4 — Profile  (Raiya)
    ========================================================== */
 
+#panel-profile {
+  background: pink;
+}
+
+.profile-title {
+  font-size: 32px;
+  text-align: left;
+}
+
+.profile-content {
+  display: flex;
+  text-align: center;
+  margin-top: 120px;
+}
+
+.profile-image {
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+}
+
+.profile-name {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profile-notification {
+  display: none;
+  width: 300px;
+  margin: 20px auto;
+  padding: 15px;
+  background: white;
+  border: 2px solid black;
+  text-align: center;
+}
+
+#profile-close {
+  padding: 8px 16px;
+  cursor: pointer;
+}
 
 /* ==========================================================
    TAB 5 — Choices  (Kyra)
