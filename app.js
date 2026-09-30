@@ -26,7 +26,13 @@ document.getElementById("panel-text").classList.add("active");
 /* ==========================================================
    TAB 1 — Text (Kyra)
    ========================================================== */
+function showChoices() {
+  let userType = document.querySelector('input[name="userType"]:checked').value;
+  let kitchenChoice = document.getElementById("kitchenChoice").value;
 
+  document.getElementById("result").innerText =
+    userType + " wants to check " + kitchenChoice;
+}
 
 /* ==========================================================
    TAB 2 — LR (Fikir)
