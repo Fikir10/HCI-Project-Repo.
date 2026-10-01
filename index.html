@@ -7,61 +7,38 @@
 </head>
 <body>
 
-  <!-- DEVICE FRAME — 640x960, don't resize. Each tab = one <section>. -->
+  <!-- Device frame: fixed 640x960. -->
   <div id="device-frame">
 
-    <!-- Only one tab-panel is visible at a time (app.js handles this) -->
     <div id="tab-content-area">
 
-      <!-- TAB 1 (Kyra) -->
-      <section class="tab-panel" id="panel-text" data-tab="text">
-        <h1>-Text Screen-</h1>
+      <!-- Text (Kyra) -->
+      <section class="tab-panel" id="panel-text">
+        <h1 class="tab-title">-Text Screen-</h1>
 
         <p>Please note that this font size is too small to read easily on this device for many...</p>
-        <br>
-        <br>
         <p>Please note that this font size is too small to read easily on this device for many...</p>
-        <br>
-        <br>
         <p>Please note that this font size is too small to read easily on this device for many...</p>
-        <br>
-        <br>
         <p>Please note that this font size is too small to read easily on this device for many...</p>
-        <br>
-        <br>
         <p>Please note that this font size is too small to read easily on this device for many...</p>
-        <br>
-        <br>
         <p>Please note that this font size is too small to read easily on this device for many...</p>
-        <br>
-        <br>
         <p>Please note that this font size is too small to read easily on this device for many...</p>
-        <br>
-        <br>
         <p>Please note that this font size is too small to read easily on this device for many...</p>
-        <br>
-        <br>
         <p>Please note that this font size is too small to read easily on this device for many...</p>
-        <br>
-        <br>
         <p>Please note that this font size is too small to read easily on this device for many...</p>
-        <br>
-        <br>
         <p>Please note that this font size is too small to read easily on this device for many...</p>
-        <br>
-        <br>
         <p>Please note that this font size is too small to read easily on this device for many...</p>
       </section>
 
-      <!-- TAB 2 (Fikir) -->
-      <section class="tab-panel" id="panel-lr" data-tab="lr">
+      <!-- LR (Fikir) -->
+      <section class="tab-panel" id="panel-lr">
         <h1 class="tab-title lr-title">-Text in Lower Right-</h1>
         <p class="lr-corner-text">Down Here</p>
       </section>
 
-      <!-- TAB 3 (Fikir) -->
-      <section class="tab-panel" id="panel-colors" data-tab="colors">
-        <h1 class="tab-title lr-title">-Colors-</h1>
+      <!-- Colors (Fikir) -->
+      <section class="tab-panel" id="panel-colors">
+        <h1 class="tab-title">-Colors-</h1>
         <p class="colors-line-1">Hello There</p>
         <p class="colors-line-2">Hi Again</p>
         <div id="colors-pie-chart">
@@ -69,30 +46,23 @@
         </div>
       </section>
 
-      <!-- TAB 4 (Raiya) -->
-         <section class="tab-panel" id="panel-profile" data-tab="profile">
-          <h1 class="tab-title profile-title">-Profile-</h1>
-
-            <div class="profile-content">
-              <img
-                id="profile-image"
-                class="profile-image"
-                src="icons/SmileyFace.png"
-                alt="Smiley Face"
-              />
-
-            <p class="profile-name">John Doe</p>
-
+      <!-- Profile (Raiya) -->
+      <section class="tab-panel" id="panel-profile">
+        <h1 class="tab-title">-Profile-</h1>
+          <div class="profile-content">
+            <img id="profile-image" class="profile-image" 
+                 src="icons/SmileyFace.png" alt="Smiley Face">
+            <p class="profile-name">Smiley J. Smile</p>
             <div id="profile-notification" class="profile-notification">
               <p>You tapped the profile image!</p>
               <button id="profile-close">Close</button>
             </div>
           </div>
-        </section>
+      </section>
 
-      <!-- TAB 5 (Kyra) -->
-      <section class="tab-panel" id="panel-choices" data-tab="choices">
-        <h1>-Choices Screen-</h1>
+      <!-- Choices (Kyra) -->
+      <section class="tab-panel" id="panel-choices">
+        <h1 class="tab-title">-Choices Screen-</h1>
         <p>Camera Type #1</p>
         <input type="radio" name="cameraType1" value="dSLR" checked> dSLR
         <br>
@@ -106,15 +76,13 @@
         <br><br>
         <button onclick="showChoices()">Show Selection</button>
         <p id="result"></p>
-        
       </section>
 
-      <!-- TAB 6 (Sydney) -->
-      <section class="tab-panel" id="panel-todo" data-tab="todo">
-        <h1>-To Do List-</h1>
+      <!-- ToDo (Sydney) -->
+      <section class="tab-panel" id="panel-todo">
+        <h1 class="tab-title">-To Do List-</h1>
         <input type="text" id="myInput" placeholder="New entry...">
         <span onclick="newElement()" class="addBtn">Add</span>
-
         <ul id="myUL">
           <li class="checked">Register for classes</li>
           <li class="checked">Start Phase 1.1.1</li>
@@ -124,7 +92,6 @@
           <li>Complete Phase 1.1.2</li>
           <li>Complete Phase 1.2</li>
         </ul>
-
       </section>
 
     </div>
@@ -159,7 +126,7 @@
 
   </div>
 
-  <!-- Chart.js + datalabels plugin (Tab 3's pie chart)-->
+  <!-- Chart.js + datalabels plugin (Color pie chart)-->
   <script src="chart.js"></script>
   <script src="chartjs-plugin-datalabels.js"></script>
   <script src="app.js"></script>

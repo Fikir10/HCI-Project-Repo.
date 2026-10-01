@@ -1,8 +1,4 @@
-/* ==========================================================
-   SHARED SHELL STYLES
-   Add your tab's CSS in your labeled block below,
-   prefixed with your tab name (text-, profile-, choices-, todo-).
-   ========================================================== */
+/* ===== Shared shell ===== */
 
 * {
   box-sizing: border-box;
@@ -18,7 +14,7 @@ body {
   min-height: 100vh;
 }
 
-/* Device frame: fixed 640x960, do not change */
+/* Fixed 640x960*/
 #device-frame {
   position: relative;
   width: 640px;
@@ -29,28 +25,36 @@ body {
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 
-/* Content area sits above the nav bar */
+/* Sits above the nav bar, bottom must match nav height */
 #tab-content-area {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 90px; /* leaves room for the bottom nav */
-  overflow-y: auto;
+  bottom: 90px; 
+  overflow: hidden;
 }
 
 .tab-panel {
-  display: none; /* app.js toggles this */
+  display: none; /* app.js toggles .active */
   height: 100%;
   padding: 0 0 20px 0;
+  overflow: hidden;
+  background: pink;
 }
 
-/* Optional title header — add <h1 class="tab-title">...</h1> as the
-   first element in your <section> to use it */
+.tab-panel.active {
+  display: flow-root;
+}
+
+.tab-panel h1 {
+  font-size: 40px;
+}
+
+/* Heading variant without outer margin & its own padding */
 .tab-title {
   margin: 0 0 12px 0;
   padding: 16px 20px;
-  font-size: 22px;
 }
 
 .tab-panel > *:not(.tab-title) {
@@ -58,11 +62,7 @@ body {
   margin-right: 20px;
 }
 
-.tab-panel.active {
-  display: block;
-}
-
-/* Bottom nav bar */
+/* Bottom nav */
 #bottom-nav {
   position: absolute;
   bottom: 0;
@@ -83,15 +83,15 @@ body {
   gap: 4px;
   background: none;
   border: none;
-  font-size: 12px;
+  font-size: 16px;
   color: #ffff00;
   cursor: pointer;
   padding: 8px 4px;
 }
 
 .nav-btn img {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
 }
 
 .nav-btn.active {
@@ -100,18 +100,21 @@ body {
   font-weight: bold;
 }
 
-/* ==========================================================
-   TAB 2 — LR  (Fikir)
-   ========================================================== */
-#panel-lr {
-  position: relative;
-  background: pink;
+/* ===== Text (Kyra) ===== */
+
+#panel-text {
+  overflow-y: auto; /* the only scrollable tab */
 }
 
-.lr-title {
-  font-size: 32px;
-  text-align: left;
+#panel-text p {
+  margin-bottom: 70px;
 }
+
+#panel-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== LR (Fikir) ===== */
 
 .lr-corner-text {
   position: absolute;
@@ -120,60 +123,39 @@ body {
   margin: 0;
 }
 
-/* ==========================================================
-   TAB 3 — Colors  (Fikir)
-   ========================================================== */
-#panel-colors {
-  background: pink;
+/* ===== Colors (Fikir) ===== */
+
+#panel-colors .colors-line-1,
+#panel-colors .colors-line-2 {
+  padding: 1px;
+  margin: 0; 
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
 }
 
 .colors-line-1 {
   color: yellow;
   background: black;
-  padding: 5px;
-  margin: 0; 
-  text-align: center;
-  font-weight: bold;
-  font-size: 24px;
 }
 
 .colors-line-2 {
   color: purple;
   background: yellow;
-  padding: 5px;
-  margin: 0 0 16px 0;
-  text-align: center;
-  font-weight: bold;
-  font-size: 24px;
 }
 
 #colors-pie-chart {
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   margin: 20px auto 0 auto;
 }
 
-/* ==========================================================
-   TAB 1 — Text  (Kyra)
-   ========================================================== */
-
-
-/* ==========================================================
-   TAB 4 — Profile  (Raiya)
-   ========================================================== */
-
-#panel-profile {
-  background: pink;
-}
-
-.profile-title {
-  font-size: 32px;
-  text-align: left;
-}
+/* ===== Profile (Raiya) ===== */
 
 .profile-content {
   display: flex;
-  text-align: center;
+  flex-direction: column;
+  align-items: center;
   margin-top: 120px;
 }
 
@@ -184,13 +166,12 @@ body {
 }
 
 .profile-name {
-  text-align: center;
   font-size: 24px;
   font-weight: bold;
 }
 
 .profile-notification {
-  display: none;
+  display: none; /* shown by app.js */
   width: 300px;
   margin: 20px auto;
   padding: 15px;
@@ -204,101 +185,105 @@ body {
   cursor: pointer;
 }
 
-/* ==========================================================
-   TAB 5 — Choices  (Kyra)
-   ========================================================== */
+/* ===== Choices (Kyra) ===== */
+
+#panel-choices {
+  font-size: 24px;
+}
+
+#panel-choices select,
+#panel-choices button {
+  font-size: inherit;
+} 
+
+#panel-choices input[type="radio"] {
+  width: 20px;
+  height: 20px;
+}
 
 
-/* ==========================================================
-   TAB 6 — ToDo  (Sydney)
-   ========================================================== */
-   * {
-    box-sizing: border-box;
-   }
+/* ===== ToDo (Sydney) ===== */
   
-   #panel-todo ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    clear: both;
-   }
+#panel-todo ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  clear: both;
+}
 
-  #panel-todo ul li {
-    cursor: pointer;
-    position: relative;
-    padding: 12px 8px 12px 40px;
-    background: #eee;
-    font-size: 18px;
-    transition: 0.2s;
+#panel-todo ul li {
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.2s;
+  -webkit-user-select: none;
+  user-select: none;
+}
 
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-   }
+#panel-todo ul li:nth-child(odd) {
+  background: #f9f9f9;
+} 
 
-   #panel-todo ul li:nth-child(odd) {
-    background: #f9f9f9;
-   } 
+#panel-todo ul li:hover {
+  background: #ddd;
+}
 
-   #panel-todo ul li:hover {
-    background: #ddd;
-   }
+#panel-todo ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
 
-   #panel-todo ul li.checked {
-    background: #888;
-    color: #fff;
-    text-decoration: line-through;
-   }
+#panel-todo ul li.checked::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  height: 15px;
+  width: 7px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
 
-   #panel-todo ul li.checked::before {
-    content: '';
-    position: absolute;
-    border-color: #fff;
-    border-style: solid;
-    border-width: 0 2px 2px 0;
-    top: 10px;
-    left: 16px;
-    transform: rotate(45deg);
-    height: 15px;
-    width: 7px;
-   }
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
 
-   .close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 12px 16px 12px 16px;
-   }
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
 
-   .close:hover {
-    background-color: #f44336;
-    color: white;
-   }
+#panel-todo input {
+  margin: 0 0 0 20px;
+  border: none;
+  border-radius: 0;
+  width: calc(75% - 20px);
+  padding: 10px;
+  float: left;
+  font-size: 22px;
+}
 
-   input {
-    margin: 0;
-    border: none;
-    border-radius: 0;
-    width: 75%;
-    padding: 10px;
-    float: left;
-    font-size: 16px;
-   }
+#panel-todo .addBtn {
+  margin: 0 20px 0 0;
+  width: calc(25% - 20px);
+  padding: 10px;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
 
-   .addBtn {
-    padding: 10px;
-    width: 25%;
-    background: #d9d9d9;
-    color: #555;
-    float: left;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 0;
-   }
-
-   .addBtn:hover {
-    background-color: #bbb;
-   }
+#panel-todo .addBtn:hover {
+  background-color: #bbb;
+}
