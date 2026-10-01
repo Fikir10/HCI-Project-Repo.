@@ -26,13 +26,6 @@ document.getElementById("panel-text").classList.add("active");
 /* ==========================================================
    TAB 1 — Text (Kyra)
    ========================================================== */
-function showChoices() {
-  let userType = document.querySelector('input[name="userType"]:checked').value;
-  let kitchenChoice = document.getElementById("kitchenChoice").value;
-
-  document.getElementById("result").innerText =
-    userType + " wants to check " + kitchenChoice;
-}
 
 /* ==========================================================
    TAB 2 — LR (Fikir)
@@ -87,7 +80,13 @@ closeNotification.addEventListener("click", function () {
 /* ==========================================================
    TAB 5 — Choices (Kyra)
    ========================================================== */
+function showChoices() {
+  let cameraType1 = document.querySelector('input[name="cameraType1"]:checked').value;
+  let cameraType2 = document.getElementById("cameraType2").value;
 
+  document.getElementById("result").innerText =
+    "Camera #1: " + cameraType1 + "Camera #2: " + cameraType2;
+}
 
 /* ==========================================================
    TAB 6 — ToDo (Sydney)
