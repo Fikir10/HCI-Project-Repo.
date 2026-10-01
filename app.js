@@ -1,13 +1,8 @@
-/* ==========================================================
-   Shared tab-switching logic — don't edit. Add your tab's JS in your
-   labeled block below.
-   ========================================================== */
+/* ===== Shared tab switching ===== */
 
 document.querySelectorAll(".nav-btn").forEach(function (btn) {
   btn.addEventListener("click", function () {
-    var tabName = btn.getAttribute("data-tab");
-
-    document.querySelectorAll(".nav-btn").forEach(function (b) {
+   document.querySelectorAll(".nav-btn").forEach(function (b) {
       b.classList.remove("active");
     });
     btn.classList.add("active");
@@ -15,56 +10,48 @@ document.querySelectorAll(".nav-btn").forEach(function (btn) {
     document.querySelectorAll(".tab-panel").forEach(function (panel) {
       panel.classList.remove("active");
     });
-    document.getElementById("panel-" + tabName).classList.add("active");
+    document.getElementById("panel-" + btn.getAttribute("data-tab")).classList.add("active");
   });
 });
 
-// Show Tab 1 by default on load
+// Text Tab is shown by default
 document.getElementById("panel-text").classList.add("active");
 
 
-/* ==========================================================
-   TAB 1 — Text (Kyra)
-   ========================================================== */
+/* ===== Colors (Fikir) ===== */
 
-/* ==========================================================
-   TAB 2 — LR (Fikir)
-   ========================================================== */
+Chart.register(ChartDataLabels);
 
-
-/* ==========================================================
-   TAB 3 — Colors (Fikir)
-   ========================================================== */
-   Chart.register(ChartDataLabels);
-
-   new Chart(document.getElementById("colors-pie-canvas"), {
-      type: "pie",
-      data: {
-         labels: ["Roses", "Violets", "Tulips"],
-         datasets: [{
-            data: [300, 500, 100],
-            backgroundColor: ["#c9436e", "#d896f0", "#f0d54a"]
-         }]
-      },
-      options: {
-         plugins: {
-            legend: {
-               position: "bottom"
-            },
-            datalabels: {
-               color: "#000",
-               font: {
-                  weight: "bold"
-               }
+new Chart(document.getElementById("colors-pie-canvas"), {
+   type: "pie",
+   data: {
+      labels: ["Roses", "Violets", "Tulips"],
+      datasets: [{
+         data: [300, 500, 100],
+         backgroundColor: ["#c9436e", "#d896f0", "#f0d54a"]
+      }]
+   },
+   options: {
+      plugins: {
+         legend: {
+            position: "bottom",
+            labels: {
+               font: {size: 20},
+               boxWidth: 40,
+               boxHeight: 20,
+               padding: 20
             }
+         },
+         datalabels: {
+            color: "#000",
+            font: { weight: "bold", size: 18}
          }
       }
-   });
+   }
+});
 
-/* ==========================================================
-   TAB 4 — Profile (Raiya)
-   Image tap -> show notification -> user can close it.
-   ========================================================== */
+/* ===== Profile (Raiya) ===== */
+
 var profileImage = document.getElementById("profile-image");
 var profileNotification = document.getElementById("profile-notification");
 var closeNotification = document.getElementById("profile-close");
@@ -77,20 +64,18 @@ closeNotification.addEventListener("click", function () {
    profileNotification.style.display = "none";
 });
 
-/* ==========================================================
-   TAB 5 — Choices (Kyra)
-   ========================================================== */
+/* ===== Choices (Kyra) ===== */
+
 function showChoices() {
   let cameraType1 = document.querySelector('input[name="cameraType1"]:checked').value;
   let cameraType2 = document.getElementById("cameraType2").value;
 
   document.getElementById("result").innerText =
-    "Camera #1: " + cameraType1 + "Camera #2: " + cameraType2;
+    "Camera #1: " + cameraType1 + ", Camera #2: " + cameraType2;
 }
 
-/* ==========================================================
-   TAB 6 — ToDo (Sydney)
-   ========================================================== */
+/* ===== ToDo (Sydney) ===== */
+
 var myNodeList = document.querySelectorAll("#myUL li");
 for (var i = 0; i < myNodeList.length; i++) {
   var span = document.createElement("SPAN");
